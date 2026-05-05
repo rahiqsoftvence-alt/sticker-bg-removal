@@ -112,7 +112,7 @@ exports.handler = async (event) => {
     console.log("✅ ImgBB URL:", publicUrl);
 
     // ── Step 2: RapidAPI background removal ──
-    const rapidBodyStr = `image_url=${encodeURIComponent(publicUrl)}&bg_image_url=`;
+    const rapidBodyStr = `image_url=${encodeURIComponent(publicUrl)}&bg_image_url=&bg_color=transparent`;
 
     const rapidResponse = await new Promise((resolve, reject) => {
       const req = https.request(
